@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Careers – Sychlopedia Chemicals</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #f4f6f9; color: #333; }
+    header { background: #00334e; }
+    .top-bar { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 1rem; }
+    .logo img { height: 50px; }
+    .nav-container { display: flex; align-items: center; gap: 1rem; }
+    .hamburger { display: none; background: none; border: none; font-size: 1.8rem; color: white; cursor: pointer; }
+    .nav-links ul { display: flex; gap: 1rem; list-style: none; margin: 0; padding: 0; }
+    .nav-links a { padding: 0.5rem; font-weight: 600; color: white; text-decoration: none; }
+    .nav-links a:hover { color: #66ccff; }
+    @media(max-width:768px) {
+      .hamburger { display: block; }
+      .nav-links { position: absolute; top: 70px; right: 0; background: #00334e; width: 100%; display: none; }
+      .nav-links.show { display: block; }
+      .nav-links ul { flex-direction: column; padding: 1rem; }
+    }
+    .banner {
+      background: url('images/career-banner.jpg') center/cover no-repeat;
+      height: 220px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .banner::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+    }
+    .banner h1 {
+      position: relative;
+      color: white;
+      font-size: clamp(2.5rem, 5vw, 3.5rem);
+      z-index: 1;
+    }
+    .career-section {
+      max-width: 600px;
+      margin: -40px auto 3rem;
+      background: white;
+      border-radius: 8px;
+      padding: 2rem;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .career-section h2 {
+      color: #00334e;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .career-section p {
+      margin-bottom: 2rem;
+      color: #555;
+      text-align: center;
+    }
+    .career-section form label {
+      display: block;
+      margin: 1rem 0 0.3rem;
+      font-weight: 600;
+    }
+    .career-section form input,
+    .career-section form textarea {
+      width: 100%;
+      padding: 0.6rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background: #fafafa;
+    }
+    .career-section form button {
+      margin-top: 1.5rem;
+      width: 100%;
+      padding: 0.8rem;
+      background: #00334e;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background .3s;
+    }
+    .career-section form button:hover {
+      background: #005580;
+    }
+    footer { background: #001d2b; padding: 1.5rem; text-align: center; color: #aaa; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="top-bar">
+    <div class="logo"><img src="images/logo-csc.png" alt="CSC Logo"></div>
+    <div class="nav-container">
+      <button class="hamburger" id="hamburger"><i class="fas fa-bars"></i></button>
+      <nav class="nav-links" id="nav-links">
+        <ul>
+         
+                    <li><a href="home.html">Home</a></li>
+
+          <li><a href="about.html">About</a></li>
+          <li><a href="carrer.html">Career</a></li>
+          <li><a href="contact.html">Contact</a></li>
+
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <div class="banner"><h1>Work With Us</h1></div>
+</header>
+
+<section class="career-section">
+  <h2>Join Our Team</h2>
+  <p>Interested in contributing to our growth? Fill in the form below to apply or send your résumé.</p>
+  <form action="#" method="post" enctype="multipart/form-data">
+    <label for="name">Your Name</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email Address</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="phone">Mobile Number</label>
+    <input type="tel" id="phone" name="phone" required>
+
+    <label for="message">Message / Cover Letter</label>
+    <textarea id="message" name="message" rows="4"></textarea>
+
+    <label for="resume">Upload Résumé (PDF/DOC)</label>
+    <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx">
+
+    <button type="submit">Submit Application</button>
+  </form>
+</section>
+
+<footer>
+  &copy; 2025 Sychlopedia Chemicals. All rights reserved.
+</footer>
+
+<script>
+  document.getElementById('hamburger').onclick = () => {
+    document.getElementById('nav-links').classList.toggle('show');
+  };
+</script>
+
+</body>
+</html>
